@@ -14,14 +14,14 @@
     $makerst = new Makerst($dataarray,$maxlength_array);
     
     $out = "";
-    /*
-    $out .= $makerst->lineout();
+    $out .= $makerst->lineout(' ','=');
     $out .= $makerst->outall();
-    $out .= $makerst->lineout();
-     */
+    $out .= $makerst->lineout(' ','=');
+    /*
     $out .= $makerst->lineout('+');
     $out .= $makerst->outall('|');
     $out .= $makerst->lineout('+');
+     */
 
     fwrite($fh_out,$out);
     fclose($fh_in);
