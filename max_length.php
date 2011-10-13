@@ -1,5 +1,4 @@
 <?php
-mb_internal_encoding("UTF-8");
 
 class Max_length {
     var $_textdata;

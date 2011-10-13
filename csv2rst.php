@@ -1,5 +1,11 @@
 <?php
-mb_internal_encoding("UTF-8");
+
+    /*
+     * テーブルの長さを指定する
+     * lengthcheck.php を実行した結果を目安にしてください
+     */
+    $maxlength_array = array(14,18,28,50);
+
 
     $fh_in = fopen('sample.csv','r');
     $fh_out = fopen('sample.rst','w');
@@ -9,15 +15,12 @@ mb_internal_encoding("UTF-8");
     }
 
     include_once('makerst.php');
-    include_once('max_length.php');
-    $maxlength = new Max_length($dataarray);
-    $maxlength_array = $maxlength->get_max_length_data();
     $makerst = new Makerst($dataarray,$maxlength_array);
     
     $out = "";
-    $out .= $makerst->lineout(' ','=');
+    $out .= $makerst->lineout();
     $out .= $makerst->outall();
-    $out .= $makerst->lineout(' ','=');
+    $out .= $makerst->lineout();
     /*
     $out .= $makerst->lineout('+');
     $out .= $makerst->outall('|');
