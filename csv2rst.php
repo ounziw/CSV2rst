@@ -7,9 +7,6 @@
         $dataarray[] = $arr;
     }
 
-    include_once('makerst.php');
-    $makerst = new Makerst($dataarray,$maxlength_array);
-
     /*
      * テーブルの長さを指定する
      * lengthcheck.php を実行した結果を目安にしてください
@@ -23,6 +20,9 @@
     $maxlength = new Max_length($dataarray);
     $maxlength_array = $maxlength->get_max_length_data();
      */
+
+    include_once('makerst.php');
+    $makerst = new Makerst($dataarray,$maxlength_array);
 
     
     $out = "";
