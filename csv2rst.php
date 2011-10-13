@@ -1,4 +1,5 @@
 <?php
+mb_internal_encoding("UTF-8");
 
     $fh_in = fopen('sample.csv','r');
     $fh_out = fopen('sample.rst','w');
